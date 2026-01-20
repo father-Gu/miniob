@@ -1,0 +1,49 @@
+deps/3rd/*
+.vscode
+!.vscode/tasks.json
+!.vscode/launch.json
+.VSCodeCounter/*
+docs/doxy/
+build/*
+build_*
+cmake-build-*/*
+build
+.cache/*
+.DS_Store
+.idea
+.ccls-cache
+compile_commands.json
+.name
+miniob.iml
+vcs.xml
+workspace.xml
+modules.xml
+GRTAGS
+GPATH
+GTAGS
+docs/book
+**/__pycache__
+#*#
+
+# ignore generated files
+src/observer/sql/parser/lex_sql.cpp
+src/observer/sql/parser/lex_sql.h
+src/observer/sql/parser/yacc_sql.cpp
+src/observer/sql/parser/yacc_sql.hpp
+
+# 忽略miniob下的db数据目录（包含所有子文件/子目录）
+src/observer/sql/optimizer/miniob/db/
+src/observer/sql/parser/miniob/db/
+src/observer/sql/stmt/miniob/db/
+src/observer/common/miniob/db/
+
+# 忽略observer的日志文件（匹配任意日期后缀的log）
+src/observer/sql/**/observer.log.*
+src/observer/common/observer.log.*
+
+# 匹配任意目录下的 observer 目录（含子目录）中的 observer.log.*
+**/observer/**/observer.log.*
+# 屏蔽 miniob/db 目录下所有数据库文件
+**/miniob/db/**
+
+**/common/**/observer.log.*
